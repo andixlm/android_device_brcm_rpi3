@@ -6,22 +6,50 @@
          is disableable for products for which it is irrelevant. -->
     <bool name="config_useVolumeKeySounds">false</bool>
 
-    <!-- Disable AUDIO_BECOMING_NOISY notifications. -->
+    <!-- Flag indicating whether the AUDIO_BECOMING_NOISY notification should
+         be sent during a change to the audio output device. -->
     <bool name="config_sendAudioBecomingNoisy">false</bool>
 
-    <!-- This device is data-only. -->
+    <!-- Flag indicating whether the current device is "voice capable".
+         If true, this means that the device supports circuit-switched
+         (i.e. voice) phone calls over the telephony network, and is
+         allowed to display the in-call UI while a cellular voice call is
+         active.  This can be overridden to false for "data only" devices
+         which can't make voice calls and don't support any in-call UI.
+         Note: this flag is subtly different from the
+         PackageManager.FEATURE_TELEPHONY system feature, which is
+         available on *any* device with a telephony radio, even if the
+         device is data-only. -->
     <bool name="config_voice_capable">false</bool>
 
-    <!-- This device does not allow sms service. -->
+    <!-- Flag indicating whether the current device allows sms service.
+         If true, this means that the device supports both sending and
+         receiving sms via the telephony network.
+         This can be overridden to false for "data only" devices
+         which can't send and receive sms message.
+         Note: Disable SMS also disable voicemail waiting sms,
+               cell broadcasting sms, and MMS. -->
     <bool name="config_sms_capable">false</bool>
 
-    <!-- Force software navigation bar -->
+    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+         autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
 
+    <!-- Sets whether menu shortcuts should be displayed on panel menus when
+         a keyboard is present. -->
     <bool name="config_showMenuShortcutsWhenKeyboardPresent">true</bool>
 
+    <!-- Flag indicating that this device does not rotate and will always remain in its default
+         orientation. Activities that desire to run in a non-compatible orientation will be run
+         from an emulated display within the physical display. -->
     <bool name="config_forceDefaultOrientation">true</bool>
 
+    <!-- If true, the direction rotation is applied to get to an application's requested
+         orientation is reversed.  Normally, the model is that landscape is
+         clockwise from portrait; thus on a portrait device an app requesting
+         landscape will cause a clockwise rotation, and on a landscape device an
+         app requesting portrait will cause a counter-clockwise rotation.  Setting
+         true here reverses that logic. -->
     <bool name="config_reverseDefaultRotation">true</bool>
 
     <!-- An Array of "[Connection name],[ConnectivityManager.TYPE_xxxx],

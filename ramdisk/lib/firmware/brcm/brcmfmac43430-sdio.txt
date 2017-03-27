@@ -60,7 +60,7 @@ muxenab=0x1
 #cldo_pwm=0x4
 
 #VCO freq 326.4MHz
-spurconfig=0x3 
+spurconfig=0x3
 
 edonthd20l=-75
 edoffthd20ul=-80

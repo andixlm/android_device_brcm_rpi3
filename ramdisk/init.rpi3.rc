@@ -1,4 +1,3 @@
-
 on init
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
