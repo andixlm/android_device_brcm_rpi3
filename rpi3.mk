@@ -1,5 +1,5 @@
 USE_OEM_TV_APP := true
-$(call inherit-product, device/google/atv/products/atv_base.mk)
+$(call inherit-product, build/target/product/aosp_base.mk)
 
 PRODUCT_NAME := rpi3
 PRODUCT_DEVICE := rpi3
@@ -62,6 +62,7 @@ PRODUCT_COPY_FILES := \
     $(PRODUCT_COPY_FILES)
 
 DEVICE_PACKAGE_OVERLAYS := device/brcm/rpi3/overlay
-PRODUCT_AAPT_PREF_CONFIG := tvdpi
-PRODUCT_CHARACTERISTICS := tv
+PRODUCT_CHARACTERISTICS := tablet
+PRODUCT_AAPT_CONFIG := normal large xlarge mdpi hdpi
+PRODUCT_AAPT_PREF_CONFIG := mdpi
 PRODUCT_LOCALES := en_US,ko_KR,ja_JP,zh_CN,hi_IN,en_GB,de_DE,fr_FR,it_IT,ru_RU,es_ES,pt_PT,nl_BE,nl_NL
